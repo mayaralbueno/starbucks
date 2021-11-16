@@ -1,25 +1,61 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StarBucks landing page </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing Page - iFullStack.tv</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+    
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="../starbucks/assets/logo (1).png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>Desde o início, em 1971, a Starbucks se propõe a ser um tipo de empresa diferente, que não apenas celebra o café e sua rica tradição, mas também que traga um sentimento de conexão.
+                  Nossa missão é inspirar e nutrir o espírito humano – uma pessoa, um café e uma comunidade de cada vez.
+                  Atualmente, com mais de 28 mil lojas em 76 países, a Starbucks é a mais importante empresa mundial de torrefação e venda de café especial. E, com cada xícara, nos esforçamos para dar vida ao nosso legado e a uma experiência excepcional.
+                  
+                  </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="../starbucks/assets/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/thumb1.png" onclick="imgSlider('images/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="images/thumb2.png" onclick="imgSlider('images/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="images/thumb3.png" onclick="imgSlider('images/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="images/facebook.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+        </ul>
+    </section>
 
-  <section>
-    <header>
-      <a href="#" class="logo"><img src="../starbucks/assets/logo (1).png" ></a>
-      <ul>
-        <li>
-          
-        </li>
-      </ul>
-    </header>
-  </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+
 </body>
 </html>
